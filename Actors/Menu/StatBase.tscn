@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Actors/Menu/StatButtonSystem.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.823529, 0.823529, 0.117647, 1 )
+border_width_bottom = 10
+border_color = Color( 0.321569, 0.321569, 0.0431373, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_bottom = 10
+border_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="Minus" type="Button"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 50 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 40.0
+margin_right = 300.0
+margin_bottom = 40.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 3.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plus" type="Button" parent="ProgressBar"]
+margin_left = 260.0
+margin_right = 300.0
+margin_bottom = 40.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ProgressBar/Plus"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="ProgressBar/Plus/Label"]
+margin_left = 50.0
+margin_right = 130.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Stat"
+__meta__ = {
+"_edit_use_anchors_": false
+}

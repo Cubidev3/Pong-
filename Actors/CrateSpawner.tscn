@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/CrateSpawner.gd" type="Script" id=1]
+
+[node name="Crate Spawner" type="Polygon2D"]
+color = Color( 1, 1, 1, 0 )
+polygon = PoolVector2Array( 0, 0, 600, 0, 600, 600, 0, 600 )
+script = ExtResource( 1 )
+crate_width = 48
+crates_number = 440
